@@ -1,3 +1,4 @@
+import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box, IconButton, Container, Avatar, Chip } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";

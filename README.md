@@ -1,33 +1,17 @@
-# Dvori HelpDesk SPA — Product-Grade Frontend
+# Dvori HelpDesk SPA — High-End Engineering Frontend
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)
-![Vite/Webpack](https://img.shields.io/badge/Vite%2FWebpack-Bundling%20Mindset-8DD6F9?logo=webpack&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-Modern%20UI-1572B6?logo=css3&logoColor=white)
+![Bundling](https://img.shields.io/badge/Vite%2FWebpack-Production%20Bundling-8DD6F9?logo=webpack&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-Design%20System-1572B6?logo=css3&logoColor=white)
 
-Professional ticket-management frontend built as a scalable, UX-first Single Page Application.
-
----
-
-## The Vision
-
-המערכת הזו אינה רק פרויקט תרגול, אלא מימוש נקי ומדויק של עקרונות **SPA (Single Page Application)** ברמת מוצר.
-הדגש הוא על ארכיטקטורה מודולרית, חוויית משתמש אחידה, ויכולת התרחבות עתידית ללא פגיעה באיכות הקוד.
-
-באמצעות חלוקה ברורה בין `pages`, `components`, `context` ו-`services`, הפרויקט מציג חשיבה הנדסית שמכוונת ל-UX/UI מצטיין ולתחזוקה ארוכת טווח.
+Production-oriented SPA frontend for service-ticket operations, designed with an engineering mindset, modular architecture, and premium UX/UI standards.
 
 ---
 
-## Core Intelligence
+## Product Vision
 
-### State Management
-ניהול מצב האפליקציה מבוסס `React Context` ו-`Hooks`, כדי לאפשר זרימת מידע עקבית, שליטה ב-Authentication, ושמירה על UI רספונסיבי ואמין.
-
-### Dynamic Routing
-שכבת הניווט נשענת על `React Router`, כולל `ProtectedRoute` למסלולים מאובטחים. כך מתקבל מעבר מהיר בין מסכים ללא רענון עמוד ובהתאם לעקרונות SPA.
-
-### Component Reusability
-המערכת נבנתה בגישת `Component Reusability` עם רכיבים משותפים כמו `Navbar` ו-`Toast`, לטובת אחידות עיצובית, קיצור זמני פיתוח, ושיפור תחזוקה.
+This product is built for scalability, reliability, and user clarity: a clean Single Page Application architecture that keeps interfaces fast, interactions intuitive, and feature delivery maintainable as the system grows across users, roles, and operational complexity.
 
 ---
 
@@ -35,65 +19,109 @@ Professional ticket-management frontend built as a scalable, UX-first Single Pag
 
 ```mermaid
 flowchart TD
-	A[main.tsx] --> B[root.tsx]
-	B --> C[App.tsx]
+		A[main.tsx] --> B[root.tsx]
+		B --> C[AuthProvider]
+		C --> D[App.tsx]
 
-	C --> D[AuthContext Provider]
-	D --> E[Browser Router]
+		D --> E[ToastProvider]
+		E --> F[Navbar]
+		E --> G[Routes]
 
-	E --> F[Public Pages\nLogin / Register]
-	E --> G[ProtectedRoute]
-	G --> H[Dashboard]
-	G --> I[Tickets]
-	G --> J[TicketDetails]
-	G --> K[NewTicket]
-	G --> L[AdminUsersPage]
+		G --> H[Login]
+		G --> I[Register]
+		G --> J[ProtectedRoute]
 
-	C --> M[Shared Components\nNavbar / Toast]
+		J --> K[Dashboard]
+		J --> L[Tickets]
+		J --> M[TicketDetails]
+		J --> N[NewTicket]
+		J --> O[AdminUsersPage]
 
-	H --> N[services/api.js]
-	I --> N
-	J --> N
-	K --> N
-	L --> N
+		K --> P[services/api.js]
+		L --> P
+		M --> P
+		N --> P
+		O --> P
 ```
 
 ---
 
 ## Tech Stack
 
-| Layer | Tool | Role |
+| Domain | Technology | Engineering Value |
 |---|---|---|
-| UI Library | React 19 | Component-based SPA rendering |
-| Build Tool | Vite 6 | Fast dev server and optimized builds |
-| Routing | react-router-dom 7 | Client-side navigation and route protection |
-| State | React Context + Hooks | Shared state and logic composition |
-| HTTP | Axios | API communication layer |
-| UI Framework | MUI + Emotion | Modern, consistent UI system |
-| Styling | CSS3 | Responsive and maintainable styling |
+| UI Runtime | React 19 | Declarative component model for complex SPA flows |
+| Build Platform | Vite 6 | Fast local feedback loop and optimized production bundles |
+| Routing Layer | react-router-dom 7 | Dynamic client routing with guarded access paths |
+| State Layer | Context API + Hooks | Controlled shared state and predictable UI behavior |
+| Network Layer | Axios | Centralized and testable API communication |
+| Design System | MUI + Emotion | Consistent UI primitives and scalable styling |
+| Styling | CSS3 | Responsive layout and maintainable visual polish |
 
 ---
 
-## Clean Setup
+## Showcase — 2x2 Product Grid
 
-### 1) Install
+<table align="center">
+	<tr>
+		<td align="center">
+			<img src="screenshots/dashboard.png" alt="Dashboard" width="420" />
+			<br />
+			<strong>Dashboard</strong>
+			<br />
+			<em>High-level UI visibility and operational clarity</em>
+		</td>
+		<td align="center">
+			<img src="screenshots/admin.png" alt="Admin User Management" width="420" />
+			<br />
+			<strong>Admin User Management</strong>
+			<br />
+			<em>High-level UI governance for user-role administration</em>
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<img src="screenshots/tickets.png" alt="Tickets List" width="420" />
+			<br />
+			<strong>Tickets List</strong>
+			<br />
+			<em>Deep feature logic with SPA performance and efficient filtering</em>
+		</td>
+		<td align="center">
+			<img src="screenshots/ticket-details.png" alt="Detailed Ticket View with Comments" width="420" />
+			<br />
+			<strong>Detailed Ticket View + Comments</strong>
+			<br />
+			<em>Deep feature logic: custom commenting and status-tracking lifecycle</em>
+		</td>
+	</tr>
+</table>
+
+### Challenge & Solution Highlights
+
+- **Dashboard — Challenge**: Keep role-aware summary data consistent across route transitions.
+	**Solution**: Centralize user/session data with `Context API` + `Hooks` for deterministic state updates.
+
+- **Admin User Management — Challenge**: Maintain secure, intuitive control for privileged actions.
+	**Solution**: Apply guarded navigation with `ProtectedRoute` and role-based behavior for governance.
+
+- **Tickets List — Challenge**: Preserve fluid UX while searching and filtering ticket collections.
+	**Solution**: Use focused React state updates and efficient client-side filtering to minimize unnecessary re-renders in SPA flows.
+
+- **Detailed Ticket View with Comments — Challenge**: Support collaborative updates while tracking ticket state transitions.
+	**Solution**: Implement a custom commenting system and status-tracking logic using React state and backend integration to keep history, communication, and lifecycle state synchronized.
+
+---
+
+## Local Setup
+
 ```bash
 npm install
-```
-
-### 2) Run (development)
-```bash
 npm run dev
 ```
 
-### 3) Build (production)
+For production build:
+
 ```bash
 npm run build
 ```
-
----
-
-## Product & Engineering Standard
-
-הפרויקט פותח בגישה מוצרית: הפרדת אחריות, קריאות גבוהה, ויכולת סקייל.
-המטרה היא לא רק אפליקציה עובדת, אלא חוויית UX/UI איכותית עם סטנדרט הנדסי גבוה.
