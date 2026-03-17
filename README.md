@@ -65,14 +65,14 @@ flowchart TD
 <table align="center">
 	<tr>
 		<td align="center">
-			<img src="screenshots/dashboard.png" alt="Dashboard" width="420" />
+			<img src="src/screenshots/dashboard.png" alt="Dashboard" width="420" />
 			<br />
 			<strong>Dashboard</strong>
 			<br />
 			<em>High-level UI visibility and operational clarity</em>
 		</td>
 		<td align="center">
-			<img src="screenshots/admin.png" alt="Admin User Management" width="420" />
+			<img src="src/screenshots/admin.png" alt="Admin User Management" width="420" />
 			<br />
 			<strong>Admin User Management</strong>
 			<br />
@@ -81,14 +81,14 @@ flowchart TD
 	</tr>
 	<tr>
 		<td align="center">
-			<img src="screenshots/tickets.png" alt="Tickets List" width="420" />
+			<img src="src/screenshots/tickets.png" alt="Tickets List" width="420" />
 			<br />
 			<strong>Tickets List</strong>
 			<br />
 			<em>Deep feature logic with SPA performance and efficient filtering</em>
 		</td>
 		<td align="center">
-			<img src="screenshots/ticket-details.png" alt="Detailed Ticket View with Comments" width="420" />
+			<img src="src/screenshots/ticket-details.png" alt="Detailed Ticket View with Comments" width="420" />
 			<br />
 			<strong>Detailed Ticket View + Comments</strong>
 			<br />
